@@ -1,27 +1,27 @@
-name: Build APK
-on: [push]
+退出（或：退出键）uses: actions/setup-python@v2- name: Build with Buildozer: Build APK
+然后python-version: '3.8'运行：|: [push]
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.8'
-      - name: Install dependencies
-        run: |
-          sudo apt update
-          sudo apt install -y git zip unzip openjdk-17-jdk python3-pip autoconf libtool pkg-config zlib1g-dev libncurses5-dev libncursesw5-dev libtinfo5 cmake libffi-dev libssl-dev
-          pip3 install --user --upgrade Cython==0.29.33 virtualenv
-          pip3 install --user buildozer
-      - name: Build with Buildozer
-        run: |
-          export PATH=$PATH:~/.local/bin/
-          buildozer android debug
-      - name: Upload APK
-        uses: actions/upload-artifact@v2
-        with:
-          name: app-debug
-          path: bin/*.apk
+突耳:
+移动到页面上的下一个交互元素。:
+-name：安装依赖项export PATH=$PATH:~/.local/bin/: ubuntu-latest
+使用:
+运行：|buildozer android debug控制+换挡+m: actions/checkout@v2
+以超级用户身份更新软件包列表：`sudo apt update`-名称：上传APK切换: 名字
+在: actions/upload-artifact@v2: actions/setup-python@v2
+步骤
+推: '3.8'
+突耳: 移动到页面上的下一个交互元素。
+-name：安装依赖项export PATH=$PATH:~/.local/bin/: |
+使用
+运行：|buildozer android debug控制+换挡+m
+以超级用户身份更新软件包列表：`sudo apt update`-名称：上传APK切换
+- export PATH=$PATH: 运行：|
+推: 突耳:~/.local/bin/
+pip3 install --user --upgrade Cython==0.29.33 virtualenv
+名字
+跑pip3 install --user buildozer用途；使用；用法|actions/upload-artifact@v2
+export PATH=$PATH:~/.local/bin/: app-debug: buildozer android debug: 名字
+- 用途；使用；用法: actions/checkout@v2: actions/upload-artifact@v2
+- 与: 名字:
+路径: actions/setup-python@v2: app-debug
+python-version: '3.8': bin/*.apk
